@@ -1,0 +1,22 @@
+[project]
+name = "dendai-skills"
+version = "0.1.0"
+description = "Small BeautifulSoup scraper that stores extracted data as JSON."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "markitdown[pdf]>=0.1.7",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+dendai-scrape = "dendai_skills.cli:main"
+dendai-webclass = "dendai_skills.webclass_cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dendai_skills*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
